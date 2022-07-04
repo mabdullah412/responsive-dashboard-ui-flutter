@@ -17,6 +17,7 @@ class MainScreen extends StatelessWidget {
 
       // ! drawer
       drawer: const SideMenu(),
+      drawerEnableOpenDragGesture: false,
 
       // ! body
       body: Row(

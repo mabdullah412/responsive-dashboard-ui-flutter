@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard_ui/constants.dart';
+
+import '../../constants.dart';
+import 'side_menu_course_progress.dart';
+import 'side_menu_navigation_buttons.dart';
+import 'side_menu_user_card.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -38,104 +42,13 @@ class SideMenu extends StatelessWidget {
             ),
 
             // ! sideMenu userCard
-            Column(
-              children: [
-                const Divider(color: Colors.white12),
-                CircleAvatar(
-                  radius: 30,
-                  backgroundColor: Colors.white24,
-                  child: Icon(
-                    Icons.person_outline,
-                    color: iconColor,
-                  ),
-                ),
-                const SizedBox(height: defaultPadding),
-                const Text(
-                  'Muhammad Abdullah',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white54),
-                ),
-                const Divider(color: Colors.white12),
-              ],
-            ),
+            const SideMenuUserCard(),
 
             // ! navigation buttons
-            Column(
-              children: [
-                const Divider(color: Colors.white12),
-                ListTile(
-                  leading: Icon(Icons.dashboard_outlined, color: iconColor),
-                  title: Text('Dashboard', style: buttonStyle),
-                  contentPadding: EdgeInsets.zero,
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: Icon(Icons.explore_outlined, color: iconColor),
-                  title: Text('Explore', style: buttonStyle),
-                  contentPadding: EdgeInsets.zero,
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading:
-                      Icon(Icons.calendar_month_outlined, color: iconColor),
-                  title: Text('Course Calender', style: buttonStyle),
-                  contentPadding: EdgeInsets.zero,
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: Icon(Icons.message_outlined, color: iconColor),
-                  title: Text('Messages', style: buttonStyle),
-                  contentPadding: EdgeInsets.zero,
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: Icon(Icons.settings_outlined, color: iconColor),
-                  title: Text('Settings', style: buttonStyle),
-                  contentPadding: EdgeInsets.zero,
-                  onTap: () {},
-                ),
-                const Divider(color: Colors.white12),
-              ],
-            ),
+            const SideMenuNavigationButtons(),
 
             // ! progress
-            Column(
-              children: [
-                const Divider(color: Colors.white12),
-                const ListTile(
-                  title: Text(
-                    'Progress',
-                    style: TextStyle(color: Colors.white54),
-                  ),
-                  contentPadding: EdgeInsets.zero,
-                ),
-                ListTile(
-                  title: Text(
-                    'JavaScript   40 %',
-                    style: courseStyle,
-                  ),
-                  subtitle: LinearProgressIndicator(
-                    backgroundColor: Colors.grey[850],
-                    color: Colors.white54,
-                    value: 0.4,
-                  ),
-                  contentPadding: EdgeInsets.zero,
-                ),
-                ListTile(
-                  title: Text(
-                    'Flutter   70 %',
-                    style: courseStyle,
-                  ),
-                  subtitle: LinearProgressIndicator(
-                    backgroundColor: Colors.grey[850],
-                    color: Colors.white54,
-                    value: 0.7,
-                  ),
-                  contentPadding: EdgeInsets.zero,
-                ),
-                const Divider(color: Colors.white12),
-              ],
-            ),
+            const SideMenuCourseProgress(),
           ],
         ),
       ),
