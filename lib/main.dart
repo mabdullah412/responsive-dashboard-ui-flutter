@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_dashboard_ui/controllers/menu_controller.dart';
 import 'package:responsive_dashboard_ui/screens/main_screen.dart';
@@ -16,9 +17,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Dashboard',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
+        primaryColor: primaryColor,
         scaffoldBackgroundColor: bgColor,
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: Colors.white),
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+            .apply(bodyColor: Colors.white),
         canvasColor: secondaryColor,
       ),
       home: MultiProvider(

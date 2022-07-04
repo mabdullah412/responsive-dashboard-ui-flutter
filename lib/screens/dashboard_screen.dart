@@ -16,7 +16,7 @@ class DashboardScreen extends StatelessWidget {
           const SizedBox(height: defaultPadding),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [],
+            children: const [],
           ),
         ],
       ),
