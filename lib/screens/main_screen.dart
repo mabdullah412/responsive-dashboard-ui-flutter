@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:responsive_dashboard_ui/controllers/menu_controller.dart';
-import 'package:responsive_dashboard_ui/screens/dashboard_screen.dart';
 
+import '../controllers/menu_controller.dart';
 import '../responsive.dart';
 import 'components/side_menu.dart';
+import 'dashboard_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -17,24 +17,26 @@ class MainScreen extends StatelessWidget {
 
       // ! drawer
       drawer: const SideMenu(),
-      drawerEnableOpenDragGesture: false,
+      drawerEnableOpenDragGesture: Responsive.isMobile(context) ? true : false,
 
       // ! body
-      body: Row(
-        children: [
-          // * side menu for desktop
-          if (Responsive.isDesktop(context))
-            const Expanded(
-              // flex: 1, (default)
-              child: SideMenu(),
-            ),
+      body: SafeArea(
+        child: Row(
+          children: [
+            // * side menu for desktop
+            if (Responsive.isDesktop(context))
+              const Expanded(
+                // flex: 1, (default)
+                child: SideMenu(),
+              ),
 
-          // * dashboard screen
-          const Expanded(
-            flex: 5,
-            child: DashboardScreen(),
-          ),
-        ],
+            // * dashboard screen
+            const Expanded(
+              flex: 5,
+              child: DashboardScreen(),
+            ),
+          ],
+        ),
       ),
     );
   }

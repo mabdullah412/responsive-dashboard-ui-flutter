@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard_ui/constants.dart';
 
 class SideMenuNavigationButtons extends StatelessWidget {
   const SideMenuNavigationButtons({
@@ -15,6 +16,7 @@ class SideMenuNavigationButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const Divider(color: Colors.white12),
         ListTile(
