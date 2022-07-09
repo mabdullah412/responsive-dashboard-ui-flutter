@@ -14,7 +14,7 @@ class CoursesInfo extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('Upcoming Classes'),
+        const Text('Upcoming Classes', style: TextStyle(fontSize: 18)),
         const SizedBox(height: defaultPadding),
         Responsive(
           mobile: CourseInfoGridView(

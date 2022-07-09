@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard_ui/screens/components/courses_info.dart';
 
 import '../constants.dart';
 import '../responsive.dart';
+import 'components/courses_info.dart';
 import 'components/header.dart';
+import 'components/scores_and_assignments.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -26,8 +27,17 @@ class DashboardScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      CoursesInfo(),
+                    children: [
+                      const CoursesInfo(),
+                      const SizedBox(height: defaultPadding),
+                      const Text(
+                        'Below Courses Info',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      if (Responsive.isMobile(context))
+                        const SizedBox(height: defaultPadding),
+                      if (Responsive.isMobile(context))
+                        const ScoresAndAssignments(),
                     ],
                   ),
                 ),
@@ -38,13 +48,9 @@ class DashboardScreen extends StatelessWidget {
 
                 // ! right panel
                 if (!Responsive.isMobile(context))
-                  Expanded(
+                  const Expanded(
                     flex: 2,
-                    child: Column(
-                      children: const [
-                        Text('Right Panel'),
-                      ],
-                    ),
+                    child: ScoresAndAssignments(),
                   ),
               ],
             ),
