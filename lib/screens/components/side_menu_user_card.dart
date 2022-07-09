@@ -26,7 +26,7 @@ class SideMenuUserCard extends StatelessWidget {
         const Text(
           'Student Name',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white54),
+          style: TextStyle(color: Colors.white70),
         ),
         const Divider(color: Colors.white12),
       ],

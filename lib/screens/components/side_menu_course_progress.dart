@@ -6,7 +6,7 @@ class SideMenuCourseProgress extends StatelessWidget {
   }) : super(key: key);
 
   final TextStyle courseStyle = const TextStyle(
-    color: Colors.white30,
+    color: Colors.white70,
     fontSize: 14,
   );
 
@@ -29,7 +29,7 @@ class SideMenuCourseProgress extends StatelessWidget {
           ),
           subtitle: LinearProgressIndicator(
             backgroundColor: Colors.grey[850],
-            color: Colors.white54,
+            color: Colors.yellow[200],
             value: 0.4,
           ),
           contentPadding: EdgeInsets.zero,
@@ -41,7 +41,7 @@ class SideMenuCourseProgress extends StatelessWidget {
           ),
           subtitle: LinearProgressIndicator(
             backgroundColor: Colors.grey[850],
-            color: Colors.white54,
+            color: Colors.blue[200],
             value: 0.7,
           ),
           contentPadding: EdgeInsets.zero,

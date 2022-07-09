@@ -1,5 +1,8 @@
 # responsive_dashboard_ui
 
-⚠ Work in Progress.
+Responsive education website portal dashboard UI made with flutter.
 
-Learning Responsiveness in Flutter by creating a responsive dashboard UI.
+## Packages Used
+
+- fl_chart
+- provider

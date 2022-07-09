@@ -6,7 +6,7 @@ class SideMenuNavigationButtons extends StatelessWidget {
   }) : super(key: key);
 
   final buttonStyle = const TextStyle(
-    color: Colors.white30,
+    color: Colors.white70,
     fontSize: 14,
   );
 
