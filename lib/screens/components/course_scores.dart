@@ -44,10 +44,11 @@ class CourseScores extends StatelessWidget {
                         '90%',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 25,
+                          fontSize: 22,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      Text('Overall'),
                     ],
                   ),
                 ),

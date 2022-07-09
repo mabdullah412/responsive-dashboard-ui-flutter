@@ -4,7 +4,8 @@ import '../constants.dart';
 import '../responsive.dart';
 import 'components/courses_info.dart';
 import 'components/header.dart';
-import 'components/scores_and_assignments.dart';
+import 'components/my_assignments.dart';
+import 'components/course_scores.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -30,10 +31,7 @@ class DashboardScreen extends StatelessWidget {
                     children: [
                       const CoursesInfo(),
                       const SizedBox(height: defaultPadding),
-                      const Text(
-                        'My Assignments',
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      const MyAssignments(),
                       if (Responsive.isMobile(context))
                         const SizedBox(height: defaultPadding),
                       if (Responsive.isMobile(context)) const CourseScores(),

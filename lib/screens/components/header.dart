@@ -38,7 +38,7 @@ class Header extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: const BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(5)),
+              borderRadius: BorderRadius.all(Radius.circular(3)),
               color: Colors.white12,
             ),
             child: Row(
