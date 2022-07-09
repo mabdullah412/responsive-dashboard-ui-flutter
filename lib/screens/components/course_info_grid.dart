@@ -56,12 +56,16 @@ class CourseInfoTile extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const CircleAvatar(
-                backgroundColor: secondaryColor,
+              CircleAvatar(
+                backgroundColor: course.color,
+                radius: 15,
               ),
               IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.more_vert),
+                icon: const Icon(
+                  Icons.more_vert,
+                  color: Colors.white54,
+                ),
               ),
             ],
           ),

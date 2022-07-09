@@ -14,7 +14,26 @@ class CoursesInfo extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('Upcoming Classes', style: TextStyle(fontSize: 18)),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text('Upcoming Classes', style: TextStyle(fontSize: 18)),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white),
+                borderRadius: const BorderRadius.all(Radius.circular(2)),
+              ),
+              child: TextButton.icon(
+                onPressed: () {},
+                icon: const Icon(Icons.add, color: Colors.white),
+                label: const Text(
+                  'Add',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+          ],
+        ),
         const SizedBox(height: defaultPadding),
         Responsive(
           mobile: CourseInfoGridView(

@@ -31,13 +31,12 @@ class DashboardScreen extends StatelessWidget {
                       const CoursesInfo(),
                       const SizedBox(height: defaultPadding),
                       const Text(
-                        'Below Courses Info',
+                        'My Assignments',
                         style: TextStyle(fontSize: 18),
                       ),
                       if (Responsive.isMobile(context))
                         const SizedBox(height: defaultPadding),
-                      if (Responsive.isMobile(context))
-                        const ScoresAndAssignments(),
+                      if (Responsive.isMobile(context)) const CourseScores(),
                     ],
                   ),
                 ),
@@ -50,7 +49,7 @@ class DashboardScreen extends StatelessWidget {
                 if (!Responsive.isMobile(context))
                   const Expanded(
                     flex: 2,
-                    child: ScoresAndAssignments(),
+                    child: CourseScores(),
                   ),
               ],
             ),

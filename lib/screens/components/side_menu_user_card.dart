@@ -24,7 +24,7 @@ class SideMenuUserCard extends StatelessWidget {
         ),
         const SizedBox(height: defaultPadding),
         const Text(
-          'Muhammad Abdullah',
+          'Student Name',
           textAlign: TextAlign.center,
           style: TextStyle(color: Colors.white54),
         ),
